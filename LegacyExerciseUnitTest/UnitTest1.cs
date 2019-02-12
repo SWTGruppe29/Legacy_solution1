@@ -26,7 +26,7 @@ namespace LegacyExerciseUnitTest
 
     public class TempSensosTest
     {
-        [Test]
+        [TestMethod]
         public void TestMethod1()
         {
 
