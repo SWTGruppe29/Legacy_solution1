@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 
 namespace LegacyExerciseUnitTester
 {
-    public class Class1
+    [TestFixture]
+
+    public class ECSTestClass
     {
+        [Test]
+        public void Test1()
+        {
+
+            Assert.That(2, Is.EqualTo(2));
+        }
+
     }
 }
