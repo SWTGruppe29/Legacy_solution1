@@ -1,14 +1,35 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace LegacyExerciseUnitTest
 {
-    [TestClass]
-    public class UnitTest1
+    [TestFixture]
+    public class ECSTest
     {
-        [TestMethod]
+        [Test]
         public void TestMethod1()
         {
+            
+        }
+    }
+
+    public class HeaterTest
+    {
+        [Test]
+        public void TestMethod1()
+        {
+
+        }
+    }
+
+    public class TempSensosTest
+    {
+        [Test]
+        public void TestMethod1()
+        {
+
         }
     }
 }
