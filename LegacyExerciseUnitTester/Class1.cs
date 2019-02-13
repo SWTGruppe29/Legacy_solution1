@@ -41,9 +41,11 @@ namespace LegacyExerciseUnitTester
 
 
         [Test]
-        public void Test1()
+        public void TestTempSensor()
         {
-            Assert.That(2, Is.EqualTo(2));
+            FakeTempSensor Fuut = new FakeTempSensor();
+            var uut = new ECS.Legacy.ECS(20, new FakeHeater(), Fuut);
+            Assert.That(Fuut.GetTemp(), Is.EqualTo(10));
         }
 
     }
