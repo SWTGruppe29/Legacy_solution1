@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ECS.Legacy;
 using NUnit.Framework;
+using TESTER;
 
 namespace LegacyExerciseUnitTester
 {
@@ -12,9 +14,35 @@ namespace LegacyExerciseUnitTester
     public class ECSTestClass
     {
         [Test]
+        public void TestECSThresholdGet()
+        {
+            var uut = new ECS.Legacy.ECS(20, new FakeHeater(), new FakeTempSensor());
+            Assert.That(uut.GetThreshold(), Is.EqualTo(20));
+        }
+
+        [Test]
+        public void TestFakeHeaterIsOff()
+        {
+            FakeHeater fuut = new FakeHeater();
+            var uut = new ECS.Legacy.ECS(5, fuut, new FakeTempSensor());
+            uut.Regulate();
+            Assert.That(fuut.IsOn, Is.EqualTo(false));
+        }
+
+
+        [Test]
+        public void TestFakeHeaterIsOn()
+        {
+            FakeHeater fuut = new FakeHeater();
+            var uut = new ECS.Legacy.ECS(20, fuut, new FakeTempSensor());
+            uut.Regulate();
+            Assert.That(fuut.IsOn, Is.EqualTo(true));
+        }
+
+
+        [Test]
         public void Test1()
         {
-
             Assert.That(2, Is.EqualTo(2));
         }
 
