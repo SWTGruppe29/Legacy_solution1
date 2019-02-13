@@ -20,8 +20,10 @@ namespace ECS.Legacy
 
     public class FakeTempSensor : ITempSensor
     {
+        public int GetTempCalled;
         public int GetTemp()
         {
+            GetTempCalled++;
             return 10;
         }
 

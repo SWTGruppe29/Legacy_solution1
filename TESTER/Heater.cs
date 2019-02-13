@@ -1,4 +1,5 @@
-﻿using TESTER;
+﻿using System.Data;
+using TESTER;
 
 namespace ECS.Legacy
 {
@@ -22,14 +23,15 @@ namespace ECS.Legacy
 
     public class FakeHeater : IHeater
     {
+        public bool IsOn;
         public void TurnOn()
         {
-
+            IsOn = true;
         }
 
         public void TurnOff()
         {
-
+            IsOn = false;
         }
 
         public bool RunSelfTest()
