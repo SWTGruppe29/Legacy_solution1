@@ -48,5 +48,13 @@ namespace LegacyExerciseUnitTester
             Assert.That(Fuut.GetTemp(), Is.EqualTo(10));
         }
 
+        [Test]
+        public void TestTempSensorTempCalled()
+        {
+            FakeTempSensor Fuut = new FakeTempSensor();
+            Fuut.GetTemp();
+            Fuut.GetTemp();
+            Assert.That(Fuut.GetTempCalled, Is.EqualTo(2));
+        }
     }
 }
