@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace TESTER
 {
-    public interface IHeater
+    public interface ISwitch
     {
         void TurnOn();
         void TurnOff();
         bool RunSelfTest();
+        bool getIsOn();
     }
 }

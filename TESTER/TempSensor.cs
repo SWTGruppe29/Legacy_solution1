@@ -21,10 +21,11 @@ namespace ECS.Legacy
     public class FakeTempSensor : ITempSensor
     {
         public int GetTempCalled;
+        public int SetTemp;
         public int GetTemp()
         {
             GetTempCalled++;
-            return 10;
+            return SetTemp;
         }
 
         public bool RunSelfTest()
