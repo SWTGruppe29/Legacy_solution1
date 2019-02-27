@@ -15,7 +15,7 @@ namespace LegacyExercise_Test_NSub
     {
 
         [Test]
-        public void Test1()
+        public void TestECSThresh()
         {
             var test1 = Substitute.For<ITempSensor>();
         }
